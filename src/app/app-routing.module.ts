@@ -5,6 +5,7 @@ import { TradesComponent } from './trades/trades.component';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'trades', component: TradesComponent },
   { path: 'about', component: AboutComponent }
