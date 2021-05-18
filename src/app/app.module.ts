@@ -6,6 +6,8 @@ import { FooterComponent } from './footer/footer.component';
 import { DiagramComponent } from './diagram/diagram.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TradesComponent } from './trades/trades.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -15,6 +17,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DiagramComponent,
     HeaderComponent,
     DashboardComponent,
+    TradesComponent,
+    AboutComponent,
 
   ],
   imports: [
