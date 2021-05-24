@@ -7,4 +7,10 @@
 <p>trades works!</p>
 <p>trades works!</p>
 <p>trades works!</p>
-<p>trades works!</p>
+
+<h2>My Trades</h2>
+<ul class="trades">
+  <li *ngFor="let trade of trades">
+    <span class="badge">{{trade.id}}</span> {{trade.currency}}: {{trade.amount}} - {{trade.timestamp}}
+  </li>
+</ul>
