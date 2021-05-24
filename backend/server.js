@@ -3,7 +3,7 @@ var express = require('express');
 var cors = require('cors')
 var app = express()
 
-app.use(cors())
+app.use(cors()) // Serve any requests regardless of security
 
 var port = 3000;
 var message = 'Server is running on port '+ port;

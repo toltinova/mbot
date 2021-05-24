@@ -17,14 +17,9 @@ export class TradesComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService.getTrades().subscribe({
-                                       next: data => {
-                                           this.trades = data;
-                                       },
-                                       error: error => {
-                                           console.error('There was an error!', error);
-                                       }
-                                   })
+        next: body => { this.trades = body; },
+        error: error => { console.error('There was an error!', error); }
+    })
   }
-
 
 }

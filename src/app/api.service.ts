@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Trade } from './trade';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -18,7 +18,6 @@ export class ApiService {
   constructor(private http: HttpClient) {};
 
   getTrades(): Observable<Trade[]> {
-    console.log("test")
     return this.http.get<Trade[]>('http://localhost:3000/trades');
   }
 
