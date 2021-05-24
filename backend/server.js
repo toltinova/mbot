@@ -33,6 +33,12 @@ function configureResponse(res, fileName) {
   res.setHeader('Content-Type', 'application/json');
   var data = fs.readFileSync(fileName);
   var json = JSON.parse(data);
+
+  var now = new Date().getTime();
+  while(new Date().getTime() < now + 500){
+    /* wait for 0,5 seconds to simulate a small calculation */
+  }
+
   res.end(JSON.stringify(json).split('TIMESTAMP').join(Date.now()));
 }
 
