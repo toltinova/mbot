@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { Trade } from './trade';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -13,10 +15,11 @@ export class ApiService {
     { id: 4, currency: 'ETH', amount: '4', timestamp: '4' }
   ];
 
-  constructor() {};
+  constructor(private http: HttpClient) {};
 
-  getTrades(): Trade[] {
-    return this.trades;
+  getTrades(): Observable<Trade[]> {
+    console.log("test")
+    return this.http.get<Trade[]>('http://localhost:3000/trades');
   }
 
 }

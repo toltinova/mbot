@@ -1,6 +1,10 @@
 var fs = require('fs');
 var express = require('express');
-var app = express();
+var cors = require('cors')
+var app = express()
+
+app.use(cors())
+
 var port = 3000;
 var message = 'Server is running on port '+ port;
 
@@ -10,6 +14,10 @@ app.get('/', function(req, res) {
 
 app.get('/stats', function(req, res) {
   configureResponse(res, 'stats.json');
+});
+
+app.get('/trades', function(req, res) {
+  configureResponse(res, 'trades.json');
 });
 
 app.get('/stats/btc', function(req, res) {

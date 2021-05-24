@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Trade } from '../trade';
+import { catchError, map, tap } from 'rxjs/operators';
 
 
 @Component({
@@ -15,7 +16,15 @@ export class TradesComponent implements OnInit {
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.trades = this.apiService.getTrades();
+    this.apiService.getTrades().subscribe({
+                                       next: data => {
+                                           this.trades = data;
+                                       },
+                                       error: error => {
+                                           console.error('There was an error!', error);
+                                       }
+                                   })
   }
+
 
 }

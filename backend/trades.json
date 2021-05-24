@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "currency": "BTC",
+    "amount": "1",
+    "timestamp": "1"
+  },
+  {
+    "id": 2,
+    "currency": "BTC",
+    "amount": "2",
+    "timestamp": "2"
+  }
+]
