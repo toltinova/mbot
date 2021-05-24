@@ -33,7 +33,7 @@ function configureResponse(res, fileName) {
   res.setHeader('Content-Type', 'application/json');
   var data = fs.readFileSync(fileName);
   var json = JSON.parse(data);
-  res.end(JSON.stringify(json));
+  res.end(JSON.stringify(json).split('TIMESTAMP').join(Date.now()));
 }
 
 app.listen(port);
