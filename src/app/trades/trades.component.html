@@ -1,19 +1,21 @@
-<p>trades works!</p>
-<p>trades works!</p>
-<p>trades works!</p>
-<p>trades works!</p>
-<p>trades works!</p>
-<p>trades works!</p>
-<p>trades works!</p>
-<p>trades works!</p>
-<p>trades works!</p>
+<div class="content" role="main">
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p>trades works!</p>
+  <p></p>
+  <p></p>
+  <p>_____________ </p>
 
-<h2>My Trades</h2>
-<ul class="trades">
-  <li *ngFor="let trade of trades">
-    <span class="badge">{{trade.id}}</span> {{trade.currency}}: {{trade.amount}} - {{trade.timestamp}}
-  </li>
-</ul>
+  <h2>My Trades</h2>
+  <ul class="trades">
+    <li *ngFor="let trade of trades">
+      <span class="badge">{{trade.id}}</span> {{trade.currency}}: {{trade.amount}} - {{trade.timestamp}}
+    </li>
+  </ul>
 
 
-<p>{{ message }}</p>
+  <p>{{ message }}</p>
+</div>
