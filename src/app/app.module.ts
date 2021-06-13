@@ -12,6 +12,10 @@ import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutDetailComponent } from './about-detail/about-detail.component';
 import { TradesDetailComponent } from './trades-detail/trades-detail.component';
+import { DashboardBalanceComponent } from './dashboard-balance/dashboard-balance.component';
+import { DashboardTradesComponent } from './dashboard-trades/dashboard-trades.component';
+import { DashboardGenericComponent } from './dashboard-generic/dashboard-generic.component';
+import { DashboardPerformanceComponent } from './dashboard-performance/dashboard-performance.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { TradesDetailComponent } from './trades-detail/trades-detail.component';
     AboutComponent,
     AboutDetailComponent,
     TradesDetailComponent,
+    DashboardBalanceComponent,
+    DashboardTradesComponent,
+    DashboardGenericComponent,
+    DashboardPerformanceComponent,
 
   ],
   imports: [
