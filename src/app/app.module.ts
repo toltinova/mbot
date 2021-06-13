@@ -11,6 +11,7 @@ import { TradesComponent } from './trades/trades.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutDetailComponent } from './about-detail/about-detail.component';
+import { TradesDetailComponent } from './trades-detail/trades-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AboutDetailComponent } from './about-detail/about-detail.component';
     TradesComponent,
     AboutComponent,
     AboutDetailComponent,
+    TradesDetailComponent,
 
   ],
   imports: [
