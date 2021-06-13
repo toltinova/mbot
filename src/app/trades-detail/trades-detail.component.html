@@ -1,1 +1,7 @@
-<p>trades-detail works!</p>
+<ul class="trades">
+  <li *ngFor="let trade of trades">
+    <span class="badge">{{trade.id}}</span> {{trade.currency}}: {{trade.amount}} - {{trade.timestamp}}
+  </li>
+</ul>
+
+<p>{{ message }}</p>

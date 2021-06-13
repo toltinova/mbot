@@ -1,11 +1,4 @@
 <div class="content" role="main">
-<app-trades-detail></app-trades-detail>
   <h2>My Trades</h2>
-  <ul class="trades">
-    <li *ngFor="let trade of trades">
-      <span class="badge">{{trade.id}}</span> {{trade.currency}}: {{trade.amount}} - {{trade.timestamp}}
-    </li>
-  </ul>
-
-  <p>{{ message }}</p>
+  <app-trades-detail></app-trades-detail>
 </div>
