@@ -28,6 +28,13 @@
 body {
   background-color: #F9F9F9;
 }
+ svg#coin {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
   .content {
     margin-top: 60px;
     display: flex;
