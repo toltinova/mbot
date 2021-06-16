@@ -18,6 +18,7 @@ import { DashboardGenericComponent } from './dashboard-generic/dashboard-generic
 import { DashboardPerformanceComponent } from './dashboard-performance/dashboard-performance.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
