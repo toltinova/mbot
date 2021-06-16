@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Trade } from '../trade';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -9,6 +9,11 @@ import { catchError, map, tap } from 'rxjs/operators';
   styleUrls: ['./trades-detail.component.css']
 })
 export class TradesDetailComponent implements OnInit {
+
+  @Input()
+  left: String;
+  @Input()
+  right: String;
 
   trades: Trade[] = [];
   message: String;
