@@ -16,6 +16,8 @@ import { DashboardBalanceComponent } from './dashboard-balance/dashboard-balance
 import { DashboardTradesComponent } from './dashboard-trades/dashboard-trades.component';
 import { DashboardGenericComponent } from './dashboard-generic/dashboard-generic.component';
 import { DashboardPerformanceComponent } from './dashboard-performance/dashboard-performance.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { DashboardPerformanceComponent } from './dashboard-performance/dashboard
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
