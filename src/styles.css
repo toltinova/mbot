@@ -20,7 +20,7 @@
     }
 
     p {
-      margin: 0;
+      padding: 8px 8px;
     }
 
     .spacer {
@@ -71,7 +71,7 @@
     border-radius: 4px;
     border: 1px solid #eee;
     background-color: #fafafa;
-    height: 40px;
+    height: auto;
     width: 200px;
     margin: 0 8px 16px;
     padding: 16px;
@@ -118,6 +118,7 @@
   .card.card.highlight-card span {
     margin-left: 60px;
   }
+
    /* Responsive Styles */
     @media screen and (max-width: 767px) {
 
@@ -135,8 +136,4 @@
         margin-left: 72px;
       }
 
-      svg#rocket-smoke {
-        right: 120px;
-        transform: rotate(-5deg);
-      }
     }

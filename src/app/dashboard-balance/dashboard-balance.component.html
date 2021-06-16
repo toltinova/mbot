@@ -2,8 +2,12 @@
 <div class="card-container">
   <mat-card class="card" target="_blank" rel="noopener">
       <mat-card-title>Total</mat-card-title>
-      <span>Total</span>
-      <span>BTC: {{amount}}</span>
+    <app-diagram></app-diagram>
+    <div class="card-container">
+      <p>BTC: {{amount}}</p>
+      <p>ETH: {{amount}}</p>
+      <p>ETC: {{amount}}</p>
+    </div>
   </mat-card>
   </div>
 
