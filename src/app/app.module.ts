@@ -21,6 +21,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
+import { NgxChartsModule }from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
-    MatDividerModule
+    MatDividerModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
