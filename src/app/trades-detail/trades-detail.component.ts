@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
-import { Trade } from '../trade';
+import { Trade } from './trade';
 import { catchError, map, tap } from 'rxjs/operators';
 
 @Component({
