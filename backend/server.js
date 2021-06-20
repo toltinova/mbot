@@ -24,8 +24,8 @@ app.get('/stats/btc', function(req, res) {
   configureResponse(res, 'stats-btc.json');
 });
 
-app.get('/total-income', function(req, res) {
-  configureResponse(res,'total-income.json')
+app.get('/total-balance', function(req, res) {
+  configureResponse(res,'total-balance.json')
 });
 
 function configureResponse(res, fileName) {

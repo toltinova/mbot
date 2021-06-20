@@ -8,13 +8,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ApiService {
 
-  trades: Trade[] = [
-    { id: 1, currency: 'BTC', amount: '1', timestamp: '1' },
-    { id: 2, currency: 'ETC', amount: '2', timestamp: '2' },
-    { id: 3, currency: 'ADA', amount: '3', timestamp: '3' },
-    { id: 4, currency: 'ETH', amount: '4', timestamp: '4' }
-  ];
-
   constructor(private http: HttpClient) {};
 
   getTrades(): Observable<Trade[]> {
