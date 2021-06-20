@@ -8,10 +8,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ApiService {
 
+  apiUrl: String = "http://localhost:3000/"
+
   constructor(private http: HttpClient) {};
 
   getTrades(): Observable<Trade[]> {
-    return this.http.get<Trade[]>('http://localhost:3000/trades');
+    return this.http.get<Trade[]>(this.apiUrl + 'trades');
   }
 
 }
