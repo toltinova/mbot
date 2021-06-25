@@ -47,7 +47,9 @@ body {
     flex-direction: column;
     align-items: center;
   }
-
+#rcorners {
+  border-radius: 20px;
+}
 .card-test{
  min-width: 350px;
  min-height: 500px;
