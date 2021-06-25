@@ -10,7 +10,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class DashboardBalanceComponent implements OnInit {
 
-  amount : TotalBalance;
+  totalBalance : TotalBalance;
   message : String;
 
    constructor(private apiService: ApiService) { }
@@ -18,7 +18,7 @@ export class DashboardBalanceComponent implements OnInit {
     ngOnInit(): void {
       this.message = 'Loading';
       this.apiService.getTotalBalance().subscribe({
-          next: body => { this.amount = body; this.message = 'Done'; },
+          next: body => { this.totalBalance = body; this.message = 'Done'; },
           error: error => { console.error('There was an error!', error); }
       })
     }
