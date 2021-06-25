@@ -54,6 +54,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   .card {
@@ -61,7 +62,7 @@ body {
       border: 1px solid #eee;
       background-color: white;
       height: auto;
-      width: 300px;
+      width: 350px;
       margin: 0 8px 16px;
       padding: 16px;
       display: flex;
