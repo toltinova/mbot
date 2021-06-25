@@ -2,19 +2,19 @@
   {
     "id": 1,
     "currency": "BTC",
-    "amount": "1",
+    "amount": "0.000011",
     "timestamp": "TIMESTAMP"
   },
   {
     "id": 2,
     "currency": "BTC",
-    "amount": "2",
+    "amount": "0.000256",
     "timestamp": "TIMESTAMP"
   },
   {
     "id": 3,
     "currency": "ETH",
-    "amount": "0.1356",
+    "amount": "0.185612",
     "timestamp": "TIMESTAMP"
   },
   {
