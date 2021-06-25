@@ -10,8 +10,8 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class DashboardBalanceComponent implements OnInit {
 
-  totalBalance : TotalBalance;
-  message : String;
+   totalBalance : TotalBalance;
+   message : String;
 
    constructor(private apiService: ApiService) { }
 

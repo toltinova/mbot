@@ -22,6 +22,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 import { NgxChartsModule }from '@swimlane/ngx-charts';
+import {Component, ViewChild, AfterViewInit} from '@angular/core';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort, SortDirection} from '@angular/material/sort';
+import {merge, Observable, of as observableOf} from 'rxjs';
+import {catchError, map, startWith, switchMap} from 'rxjs/operators';
+import { TradesDetailTableComponent } from './trades-detail-table/trades-detail-table.component';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +45,7 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
     DashboardTradesComponent,
     DashboardGenericComponent,
     DashboardPerformanceComponent,
+    TradesDetailTableComponent,
 
   ],
   imports: [
