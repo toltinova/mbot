@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+import { TotalBalance } from './total-balance';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard-balance',
@@ -7,10 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardBalanceComponent implements OnInit {
 
-  amount = 50;
-  constructor() { }
+  amount : TotalBalance;
+  message : String;
 
-  ngOnInit(): void {
-  }
+   constructor(private apiService: ApiService) { }
+
+    ngOnInit(): void {
+      this.message = 'Loading';
+      this.apiService.getTotalBalance().subscribe({
+          next: body => { this.amount = body; this.message = 'Done'; },
+          error: error => { console.error('There was an error!', error); }
+      })
+    }
 
 }
