@@ -48,13 +48,23 @@ body {
     align-items: center;
   }
 #rcorners {
-  border-radius: 20px;
+  border-radius: 30px;
    padding:24px;
 }
 .card-test{
  min-width: 350px;
  min-height: 500px;
 }
+.card-test:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+  .card-test:active {
+      transform: translateY(3px);
+      box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1)
+
+    }
+
 .column {
   float: left;
   padding: 10px;
