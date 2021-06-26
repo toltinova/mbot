@@ -16,13 +16,14 @@ export class DiagramComponent {
         { name: "ETC", value: 15000 },
       ];
   view: any[] = [300, 300];
-  gradient: boolean = true;
+  gradient: boolean = false;
   showLegend: boolean = false;
   showLabels: boolean = false;
   isDoughnut: boolean = false;
+  tooltipDisabled: boolean = true;
   legendPosition: string = 'below';
   colorScheme = {
-      domain: ['#FF9900', '#101A35', '#A1A1A1',]
+      domain: ['#FF9900', '#101A35', '#DBDBDB',]
     };
 
 
