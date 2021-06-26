@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
   @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+  @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 
   h1,
@@ -29,6 +30,7 @@
 
 
 body {
+  font-family: Gramatika, 'Gramatika', sans-serif;
   background-color: #F9F9F9;
 }
 
@@ -89,9 +91,10 @@ body {
   display: table;
   clear: both;
 }
-.card svg.material-icons path {
-    fill: #888;
-  }
+.mat-icon {
+  font-size: 50px;
+  color: #A0A7A6;
+}
 
   .card-container {
     display: flex;
