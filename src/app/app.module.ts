@@ -17,6 +17,7 @@ import { DashboardTradesComponent } from './dashboard-trades/dashboard-trades.co
 import { DashboardGenericComponent } from './dashboard-generic/dashboard-generic.component';
 import { DashboardPerformanceComponent } from './dashboard-performance/dashboard-performance.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from "@angular/material/icon";
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
@@ -60,7 +61,8 @@ import { TradesDetailTableComponent } from './trades-detail-table/trades-detail-
     MatDividerModule,
     NgxChartsModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

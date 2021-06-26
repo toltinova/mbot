@@ -28,6 +28,10 @@ app.get('/total-balance', function(req, res) {
   configureResponse(res,'total-balance.json')
 });
 
+app.get('/performance', function(req, res) {
+  configureResponse(res,'performance.json')
+});
+
 function configureResponse(res, fileName) {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'application/json');

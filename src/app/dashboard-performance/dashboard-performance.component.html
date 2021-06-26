@@ -1,14 +1,21 @@
+<mat-card id="rcorners" class="card-test" style="text-align: center;">
+  <mat-icon>info</mat-icon>
+  <mat-card-title>Performance</mat-card-title>
 
-  <mat-card id="rcorners" class="card-test">
-    <mat-card-title>Performance</mat-card-title>
-    <mat-card-content>
-      <mat-divider></mat-divider>
-      <p>{{performance.growth}}</p>
-      <p>{{performance.compared}}</p>
-      <p>{{performance.total}}</p>
-    </mat-card-content>
-    <mat-card-actions style="text-align: center;">
-      <a mat-raised-button color ="accent" >Adjust the strategy</a>
-    </mat-card-actions>
-  </mat-card>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <div class="content">
+    <p>Since the start of the MBot:</p>
+    <h3>Assets growth</h3>
+    <h1>+{{performance.growth}}%</h1>
+    <h3>Compared to Buyhold</h3>
+    <h1>+{{performance.compared}} USDt</h1>
+      <h3>Total</h3>
+      <h1>+{{performance.total}} USDt</h1>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button color ="accent" >Adjust the strategy</a>
+  </mat-card-actions>
+</mat-card>
 

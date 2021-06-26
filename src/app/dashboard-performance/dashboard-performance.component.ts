@@ -15,12 +15,12 @@ export class DashboardPerformanceComponent implements OnInit {
 
   constructor(private apiService: ApiService) { }
 
-    ngOnInit(): void {
+  ngOnInit(): void {
       this.message = 'Loading';
       this.apiService.getPerformance().subscribe({
           next: body => { this.performance = body; this.message = 'Done'; },
           error: error => { console.error('There was an error!', error); }
       })
-    }
+   }
 
 }

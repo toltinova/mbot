@@ -1,13 +1,25 @@
 
   <mat-card id="rcorners" class="card-test">
+      <mat-icon>info</mat-icon>
       <mat-card-title>Total Balance</mat-card-title>
     <mat-divider></mat-divider>
     <app-diagram class="row"></app-diagram>
     <div class="row">
-      <div class="column-text"><p>BTC: {{totalBalance.percentage.btc}}%</p></div>
-      <div class="column-text"><p>ETH: {{totalBalance.percentage.eth}}%</p></div>
-      <div class="column-text"><p>ETC: {{totalBalance.percentage.etc}}%</p></div>
+
+      <div class="column-text">
+        <h4>BTC: {{totalBalance.percentage.btc}}%</h4>
+      </div>
+
+      <div class="column-text">
+        <h4>ETH: {{totalBalance.percentage.eth}}%</h4>
+      </div>
+
+      <div class="column-text">
+        <h4>ETC: {{totalBalance.percentage.etc}}%</h4>
+      </div>
+
     </div>
+
     <mat-card-actions>
       <p>Total</p>
       <h2>{{totalBalance.total.usd}} USDt</h2>
