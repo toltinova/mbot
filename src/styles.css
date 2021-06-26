@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
   @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
+  @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
   h1,
     h2,
@@ -50,7 +50,7 @@ body {
   justify-content:center;
 }
 
-#rcorners {
+.rcorners {
   border-radius: 30px;
    padding:24px;
 }
