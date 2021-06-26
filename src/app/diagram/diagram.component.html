@@ -1,8 +1,11 @@
 <ngx-charts-pie-chart
-  [labels]="false"
-  [legendTitle]="'Total'"
-  [legend]="false"
+  [view]="view"
+  [scheme]="colorScheme"
   [results]="tradeData"
-  [view]="[300,300]"
+  [gradient]="gradient"
+  [legend]="showLegend"
+  [legendPosition]="legendPosition"
+  [labels]="showLabels"
+  [doughnut]="isDoughnut"
 >
 </ngx-charts-pie-chart>
