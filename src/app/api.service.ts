@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Trade } from './trades-detail/trade';
+import { Performance } from './dashboard-performance/performance';
 import { TotalBalance } from './dashboard-balance/total-balance';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -19,6 +20,10 @@ export class ApiService {
 
   getTotalBalance(): Observable<TotalBalance> {
     return this.httpClient.get<TotalBalance>(this.apiUrl + 'total-balance');
+  }
+
+  getPerformance(): Observable<Performance> {
+    return this.httpClient.get<Performance>(this.apiUrl + 'performance');
   }
 
 }
