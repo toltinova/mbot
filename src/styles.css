@@ -68,6 +68,11 @@ body {
 .column {
   float: left;
   padding: 10px;
+  margin-bottom: 20px;
+}
+.column-text {
+  float: left;
+  width: 33.33%;
 }
 
 /* Clear floats after the columns */

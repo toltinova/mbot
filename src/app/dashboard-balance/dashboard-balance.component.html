@@ -3,10 +3,11 @@
       <mat-card-title>Total Balance</mat-card-title>
     <mat-divider></mat-divider>
     <app-diagram class="row"></app-diagram>
-
-      <p>BTC: {{totalBalance.percentage.btc}}</p>
-      <p>ETH: {{totalBalance.percentage.eth}}</p>
-      <p>ETC: {{totalBalance.percentage.etc}}</p>
+    <div class="row">
+      <div class="column-text"><p>BTC: {{totalBalance.percentage.btc}}</p></div>
+      <div class="column-text"><p>ETH: {{totalBalance.percentage.eth}}</p></div>
+      <div class="column-text"><p>ETC: {{totalBalance.percentage.etc}}</p></div>
+    </div>
       <h2>Total</h2>
       <p>{{totalBalance.total.usd}} USDt</p>
 
