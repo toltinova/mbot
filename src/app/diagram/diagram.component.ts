@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diagram.component.css']
 })
 export class DiagramComponent implements OnInit {
+
   tradeData = [
       { name: "BTC", value: 105000 },
       { name: "ETH", value: 55000 },
