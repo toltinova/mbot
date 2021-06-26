@@ -30,6 +30,7 @@ import {MatSort, SortDirection} from '@angular/material/sort';
 import {merge, Observable, of as observableOf} from 'rxjs';
 import {catchError, map, startWith, switchMap} from 'rxjs/operators';
 import { TradesDetailTableComponent } from './trades-detail-table/trades-detail-table.component';
+import { AdjustStrategyComponent } from './adjust-strategy/adjust-strategy.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { TradesDetailTableComponent } from './trades-detail-table/trades-detail-
     DashboardGenericComponent,
     DashboardPerformanceComponent,
     TradesDetailTableComponent,
+    AdjustStrategyComponent
 
   ],
   imports: [
