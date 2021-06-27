@@ -4,13 +4,14 @@ import { Trade } from './trades-detail/trade';
 import { Performance } from './dashboard-performance/performance';
 import { TotalBalance } from './dashboard-balance/total-balance';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from './../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  apiUrl: String = "http://localhost:3000/"
+  apiUrl: String = environment.apiUrl;
 
   constructor(private httpClient: HttpClient) {};
 

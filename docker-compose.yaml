@@ -14,5 +14,3 @@ services:
     image: "otoltinova/mbot-frontend"
     ports:
       - "80:80"
-    environment:
-      SERVER_URL: development
