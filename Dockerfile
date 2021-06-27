@@ -1,15 +1,15 @@
-FROM node:14.16.1-alpine As builder
-
-WORKDIR /usr/src/app
-
-COPY package.json package-lock.json ./
-
+# Stage 1: Build the app in a node builder
+FROM node:14.16.1-alpine AS builder
+WORKDIR /usr/local/app
+COPY ./ /usr/local/app/
 RUN npm install
-
-COPY . .
-
 RUN npm run build --prod
 
+# Stage 2: Serve app with nginx server
 FROM nginx:alpine
 
-COPY --from=builder /usr/src/app/dist/mbot/ /usr/share/nginx/html
+RUN rm -rf /usr/share/nginx/html/*
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /usr/local/app/dist/mbot /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
