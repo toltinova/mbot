@@ -1,7 +1,12 @@
 @import '~@angular/material/theming';
 
+@font-face{
+	font-family: 'Gramatika';
+	src: url('gramatika-webkit/gramatika-bold-webfont.woff');
+};
+
 $custom-typography: mat-typography-config(
-$font-family: 'Nunito+Sans',
+$font-family: 'Gramatika',
 $title: mat-typography-level(24px,32px, bold)
 );
 @include mat-core($custom-typography);
