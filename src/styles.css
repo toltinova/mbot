@@ -127,6 +127,10 @@ mat-icon.mat-card-avatar {
 .mat-card {
   border-radius: 30px !important;
 }
+.mat-raised-button {
+  border-radius: 20px !important;
+  min-width: 200px !important;
+}
 
 .mat-card-header {
   padding: 20px;
