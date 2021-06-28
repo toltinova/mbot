@@ -2,12 +2,15 @@
 
 @font-face{
 	font-family: 'Gramatika';
+	src: url('gramatika-webkit/gramatika-black-webfont.woff');
 	src: url('gramatika-webkit/gramatika-bold-webfont.woff');
+	src: url('gramatika-webkit/gramatika-medium-webfont.woff');
+	src: url('gramatika-webkit/gramatika-regular-webfont.woff')
 };
 
 $custom-typography: mat-typography-config(
 $font-family: 'Gramatika',
-$title: mat-typography-level(24px,32px, bold)
+$title: mat-typography-level(18px,8px, bold)
 );
 @include mat-core($custom-typography);
 
