@@ -3,8 +3,8 @@
     "usd" : 1234.56
   },
   "percentage": {
-    "btc" : 25,
+    "btc" : 5,
     "eth" : 35,
-    "etc" : 40
+    "etc" : 60
   }
 }

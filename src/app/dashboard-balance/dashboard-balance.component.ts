@@ -15,12 +15,12 @@ export class DashboardBalanceComponent implements OnInit {
 
    constructor(private apiService: ApiService) { }
 
-    ngOnInit(): void {
+   ngOnInit(): void {
       this.message = 'Loading';
       this.apiService.getTotalBalance().subscribe({
-          next: body => { this.totalBalance = body; this.message = 'Done'; },
-          error: error => { console.error('There was an error!', error); }
+         next: body => { this.totalBalance = body; this.message = 'Done'; },
+         error: error => { console.error('There was an error!', error); }
       })
-    }
+   }
 
 }
