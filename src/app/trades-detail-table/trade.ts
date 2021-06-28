@@ -6,7 +6,7 @@ export interface Trades {
 export interface Trade {
   id: number;
   currency: string;
-  amount: string;
+  amount: number;
   timestamp: string;
   price: number;
 }
