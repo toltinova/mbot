@@ -11,14 +11,12 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class DashboardBalanceComponent implements OnInit {
 
    totalBalance : TotalBalance;
-   message : String;
 
    constructor(private apiService: ApiService) { }
 
    ngOnInit(): void {
-      this.message = 'Loading';
       this.apiService.getTotalBalance().subscribe({
-         next: body => { this.totalBalance = body; this.message = 'Done'; },
+         next: body => { this.totalBalance = body; },
          error: error => { console.error('There was an error!', error); }
       })
    }
