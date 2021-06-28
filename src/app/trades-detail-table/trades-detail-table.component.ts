@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ViewChild, OnDestroy} from '@angular/core';
 import {MatPaginator, PageEvent} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { ApiService } from '../api.service';
@@ -11,8 +11,9 @@ import { catchError, map, tap } from 'rxjs/operators';
   templateUrl: './trades-detail-table.component.html',
   styleUrls: ['./trades-detail-table.component.css']
 })
-export class TradesDetailTableComponent implements AfterViewInit {
+export class TradesDetailTableComponent implements AfterViewInit, OnDestroy {
 
+  interval : any;
   length: number = 0;
   trades: Trade[] = [];
   displayedColumns: string[] = ['currency', 'amount', 'timestamp', 'price'];
@@ -23,10 +24,15 @@ export class TradesDetailTableComponent implements AfterViewInit {
   constructor(private apiService: ApiService) { }
 
   ngAfterViewInit() {
-    this.loadTrades(null);
+    this.interval = setInterval(() => { this.loadTrades(); }, 2500);
+    this.loadTrades();
     this.paginator.page
         .pipe(tap(() => this.loadTrades()))
         .subscribe();
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
   }
 
   loadTrades(event?:PageEvent) {
