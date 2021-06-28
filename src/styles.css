@@ -10,7 +10,7 @@
     h4,
     h5,
     h6 {
-      padding: 8px 8px;
+      padding: 4px 4px;
       margin: 8px;
 
     }
@@ -118,3 +118,6 @@ mat-icon.mat-card-avatar {
   .mat-card-title {
     margin-top: 20px;
   }
+    .mat-card-header {
+      padding: 20px;
+    }
