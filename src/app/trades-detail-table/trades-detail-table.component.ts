@@ -15,7 +15,7 @@ export class TradesDetailTableComponent implements AfterViewInit {
 
   length: number = 0;
   trades: Trade[] = [];
-  displayedColumns: string[] = ['id', 'currency', 'amount', 'timestamp', 'price'];
+  displayedColumns: string[] = ['currency', 'amount', 'timestamp', 'price'];
   dataSource = new MatTableDataSource<Trade>(this.trades);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
