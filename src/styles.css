@@ -124,6 +124,9 @@ mat-icon.mat-card-avatar {
   margin-top: 20px;
   color: #101A35;
 }
+.mat-card {
+  border-radius: 30px !important;
+}
 
 .mat-card-header {
   padding: 20px;
