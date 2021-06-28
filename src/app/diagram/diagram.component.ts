@@ -27,8 +27,7 @@ export class DiagramComponent implements OnInit {
         { name: "BTC", value: body.percentage.btc },
         { name: "ETC", value: body.percentage.etc },
         { name: "ETH", value: body.percentage.eth }
-
-      ]; },
+      ];},
       error: error => { console.error('There was an error!', error); }
     })
   }
