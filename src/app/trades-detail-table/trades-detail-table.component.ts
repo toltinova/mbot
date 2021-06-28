@@ -12,8 +12,8 @@ import { catchError, map, tap } from 'rxjs/operators';
   styleUrls: ['./trades-detail-table.component.css']
 })
 export class TradesDetailTableComponent implements AfterViewInit {
+
   trades: Trade[] = [];
-  message: String;
   displayedColumns: string[] = ['id', 'currency', 'amount', 'timestamp'];
   dataSource = new MatTableDataSource<Trade>(this.trades);
 
@@ -23,14 +23,18 @@ export class TradesDetailTableComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.loadTrades();
+    this.paginator.page
+        .pipe(tap(() => this.loadTrades()))
+        .subscribe();
   }
 
   loadTrades() {
-    this.dataSource.paginator = this.paginator;
-    this.message = 'Loading';
     this.apiService.getTrades(this.paginator.pageIndex, this.paginator.pageSize).subscribe({
-        next: body => { this.dataSource = new MatTableDataSource<Trade>(body); this.message = 'Done'; },
-        error: error => { console.error('There was an error!', error); }
+      next: body => {
+        this.dataSource = new MatTableDataSource<Trade>(body);
+        this.dataSource.paginator = this.paginator;
+      },
+      error: error => { console.error('There was an error!', error); }
     })
   }
 
