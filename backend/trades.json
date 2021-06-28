@@ -1,38 +1,41 @@
-[
-  {
-    "id": 1,
-    "currency": "BTC",
-    "amount": "0.000011",
-    "timestamp": "TIMESTAMP"
-  },
-  {
-    "id": 2,
-    "currency": "BTC",
-    "amount": "0.000256",
-    "timestamp": "TIMESTAMP"
-  },
-  {
-    "id": 3,
-    "currency": "ETH",
-    "amount": "0.185612",
-    "timestamp": "TIMESTAMP"
-  },
-  {
-    "id": 4,
-    "currency": "ETH",
-    "amount": "0.1356",
-    "timestamp": "TIMESTAMP"
-  },
-  {
-    "id": 5,
-    "currency": "ETC",
-    "amount": "0.1216",
-    "timestamp": "TIMESTAMP"
-  },
-  {
-    "id": 6,
-    "currency": "BTC",
-    "amount": "0.00056",
-    "timestamp": "TIMESTAMP"
-  }
-]
+{
+  "totalCount": 123,
+  "trades": [
+    {
+      "id": 1,
+      "currency": "BTC",
+      "amount": "0.000011",
+      "timestamp": "TIMESTAMP"
+    },
+    {
+      "id": 2,
+      "currency": "BTC",
+      "amount": "0.000256",
+      "timestamp": "TIMESTAMP"
+    },
+    {
+      "id": 3,
+      "currency": "ETH",
+      "amount": "0.185612",
+      "timestamp": "TIMESTAMP"
+    },
+    {
+      "id": 4,
+      "currency": "ETH",
+      "amount": "0.1356",
+      "timestamp": "TIMESTAMP"
+    },
+    {
+      "id": 5,
+      "currency": "ETC",
+      "amount": "0.1216",
+      "timestamp": "TIMESTAMP"
+    },
+    {
+      "id": 6,
+      "currency": "BTC",
+      "amount": "0.00056",
+      "timestamp": "TIMESTAMP"
+    }
+  ]
+}

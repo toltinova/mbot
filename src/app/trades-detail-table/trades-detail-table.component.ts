@@ -1,8 +1,8 @@
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
+import {MatPaginator, PageEvent} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { ApiService } from '../api.service';
-import { Trade } from './trade';
+import { Trades, Trade } from './trade';
 import { catchError, map, tap } from 'rxjs/operators';
 
 
@@ -13,6 +13,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class TradesDetailTableComponent implements AfterViewInit {
 
+  length: number = 0;
   trades: Trade[] = [];
   displayedColumns: string[] = ['id', 'currency', 'amount', 'timestamp'];
   dataSource = new MatTableDataSource<Trade>(this.trades);
@@ -22,20 +23,22 @@ export class TradesDetailTableComponent implements AfterViewInit {
   constructor(private apiService: ApiService) { }
 
   ngAfterViewInit() {
-    this.loadTrades();
+    this.loadTrades(null);
     this.paginator.page
         .pipe(tap(() => this.loadTrades()))
         .subscribe();
   }
 
-  loadTrades() {
+  loadTrades(event?:PageEvent) {
     this.apiService.getTrades(this.paginator.pageIndex, this.paginator.pageSize).subscribe({
       next: body => {
-        this.dataSource = new MatTableDataSource<Trade>(body);
+        this.dataSource = new MatTableDataSource<Trade>(body.trades);
         this.dataSource.paginator = this.paginator;
+        this.length = body.totalCount;
       },
       error: error => { console.error('There was an error!', error); }
     })
+    return event;
   }
 
 }

@@ -11,7 +11,6 @@ import { TradesComponent } from './trades/trades.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutDetailComponent } from './about-detail/about-detail.component';
-import { TradesDetailComponent } from './trades-detail/trades-detail.component';
 import { DashboardBalanceComponent } from './dashboard-balance/dashboard-balance.component';
 import { DashboardTradesComponent } from './dashboard-trades/dashboard-trades.component';
 import { DashboardGenericComponent } from './dashboard-generic/dashboard-generic.component';
@@ -44,7 +43,6 @@ import { AdjustStrategyComponent } from './adjust-strategy/adjust-strategy.compo
     TradesComponent,
     AboutComponent,
     AboutDetailComponent,
-    TradesDetailComponent,
     DashboardBalanceComponent,
     DashboardTradesComponent,
     DashboardGenericComponent,
