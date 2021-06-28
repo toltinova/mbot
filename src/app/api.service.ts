@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { Trade } from './trades-detail/trade';
 import { Performance } from './dashboard-performance/performance';
 import { TotalBalance } from './dashboard-balance/total-balance';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { environment } from './../environments/environment';
 
 @Injectable({
@@ -15,8 +15,12 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) {};
 
-  getTrades(): Observable<Trade[]> {
-    return this.httpClient.get<Trade[]>(this.apiUrl + 'trades');
+  getTrades(pageNumber = 0, pageSize = 5): Observable<Trade[]> {
+    return this.httpClient.get<Trade[]>(this.apiUrl + 'trades', {
+     params: new HttpParams()
+         .set('pageNumber', pageNumber.toString())
+         .set('pageSize', pageSize.toString())
+     });
   }
 
   getTotalBalance(): Observable<TotalBalance> {

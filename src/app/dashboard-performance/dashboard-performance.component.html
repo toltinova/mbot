@@ -10,11 +10,11 @@
     <div class="content">
 
     <h3>Assets growth</h3>
-    <h1>+{{performance.growth}}%</h1>
+    <h1>+{{performance?.growth || "..." }}%</h1>
     <h3>Compared to Buyhold</h3>
-    <h1>+{{performance.compared}} USDt</h1>
+    <h1>+{{performance?.compared || "..." }} USDt</h1>
       <h3>Total</h3>
-      <h1>+{{performance.total}} USDt</h1>
+      <h1>+{{performance?.total || "..." }} USDt</h1>
     </div>
   </mat-card-content>
   <mat-card-actions>

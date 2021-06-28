@@ -18,19 +18,22 @@ export class TradesDetailTableComponent implements AfterViewInit {
   dataSource = new MatTableDataSource<Trade>(this.trades);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
+
   constructor(private apiService: ApiService) { }
-  ngOnInit(): void {
+
+  ngAfterViewInit() {
+    this.loadTrades();
+  }
+
+  loadTrades() {
+    this.dataSource.paginator = this.paginator;
     this.message = 'Loading';
-    this.apiService.getTrades().subscribe({
+    this.apiService.getTrades(this.paginator.pageIndex, this.paginator.pageSize).subscribe({
         next: body => { this.dataSource = new MatTableDataSource<Trade>(body); this.message = 'Done'; },
         error: error => { console.error('There was an error!', error); }
     })
   }
 
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-  }
 }
 
 
