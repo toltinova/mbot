@@ -5,7 +5,7 @@ services:
   backend:
     image: "aboger/mbot-backend:0.0.1"
     ports:
-      - "8080:8080"
+      - "3000:8080"
 
 
   frontend:
