@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChild, OnDestroy} from '@angular/core';
+import {AfterViewInit, Component, ViewChild, OnDestroy, Input } from '@angular/core';
 import {MatPaginator, PageEvent} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { ApiService } from '../api.service';
@@ -13,6 +13,9 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class TradesDetailTableComponent implements AfterViewInit, OnDestroy {
 
+  @Input()
+  paginatorVisible : boolean = true;
+
   interval : any;
   length: number = 0;
   trades: Trade[] = [];
@@ -26,9 +29,11 @@ export class TradesDetailTableComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.interval = setInterval(() => { this.loadTrades(); }, 2500);
     this.loadTrades();
-    this.paginator.page
-        .pipe(tap(() => this.loadTrades()))
-        .subscribe();
+    if (this.paginatorVisible) {
+      this.paginator.page
+          .pipe(tap(() => this.loadTrades()))
+          .subscribe();
+    }
   }
 
   ngOnDestroy(): void {
@@ -36,7 +41,9 @@ export class TradesDetailTableComponent implements AfterViewInit, OnDestroy {
   }
 
   loadTrades(event?:PageEvent) {
-    this.apiService.getTrades(this.paginator.pageIndex, this.paginator.pageSize).subscribe({
+    var pageIndex = this.paginatorVisible ? this.paginator.pageIndex : 0;
+    var pageSize = this.paginatorVisible ? this.paginator.pageSize : 7;
+    this.apiService.getTrades(pageIndex, pageSize).subscribe({
       next: body => {
         this.dataSource = new MatTableDataSource<Trade>(body.trades);
         this.length = body.totalCount;
