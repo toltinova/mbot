@@ -33,7 +33,6 @@ export class TradesDetailTableComponent implements AfterViewInit {
     this.apiService.getTrades(this.paginator.pageIndex, this.paginator.pageSize).subscribe({
       next: body => {
         this.dataSource = new MatTableDataSource<Trade>(body.trades);
-        this.dataSource.paginator = this.paginator;
         this.length = body.totalCount;
       },
       error: error => { console.error('There was an error!', error); }
