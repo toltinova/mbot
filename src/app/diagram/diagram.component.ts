@@ -1,4 +1,4 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit, OnDestroy } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ApiService } from '../api.service';
@@ -8,7 +8,7 @@ import { ApiService } from '../api.service';
   templateUrl: './diagram.component.html',
   styleUrls: ['./diagram.component.css']
 })
-export class DiagramComponent implements OnInit {
+export class DiagramComponent implements OnInit, OnDestroy {
   tradeData = [];
   view: any[] = [300, 300];
   gradient: boolean = false;
@@ -19,9 +19,20 @@ export class DiagramComponent implements OnInit {
   legendPosition: string = 'below';
   colorScheme = { domain: ['#FF6635', '#101A35', '#DBDBDB',] };
 
+  interval : any;
+
   constructor(private apiService : ApiService) {}
 
   ngOnInit(): void {
+    this.interval = setInterval(() => { this.loadData(); }, 2500);
+    this.loadData();
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
+  }
+
+  loadData(): void {
     this.apiService.getTotalBalance().subscribe({
       next: body => { this.tradeData = [
         { name: "BTC", value: body.percentage.btc },
