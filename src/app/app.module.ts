@@ -25,6 +25,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import { NgxChartsModule }from '@swimlane/ngx-charts';
 import {Component, ViewChild, AfterViewInit} from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSort, SortDirection} from '@angular/material/sort';
 import {merge, Observable, of as observableOf} from 'rxjs';

@@ -23,7 +23,7 @@ export class DiagramComponent {
   tooltipDisabled: boolean = true;
   legendPosition: string = 'below';
   colorScheme = {
-      domain: ['#FFA556', '#101A35', '#DBDBDB',]
+      domain: ['#FF6635', '#101A35', '#DBDBDB',]
     };
 
 
