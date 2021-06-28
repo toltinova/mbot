@@ -11,9 +11,9 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 })
 export class DiagramComponent {
   tradeData = [
-        { name: "BTC", value: 105000 },
-        { name: "ETH", value: 55000 },
-        { name: "ETC", value: 15000 },
+        { name: "BTC", value: 35 },
+        { name: "ETH", value: 40 },
+        { name: "ETC", value: 40 },
       ];
   view: any[] = [300, 300];
   gradient: boolean = false;
