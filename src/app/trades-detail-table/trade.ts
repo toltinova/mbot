@@ -8,4 +8,5 @@ export interface Trade {
   currency: string;
   amount: string;
   timestamp: string;
+  price: number;
 }

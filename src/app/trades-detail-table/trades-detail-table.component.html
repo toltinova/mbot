@@ -25,6 +25,12 @@
       <td mat-cell *matCellDef="let trade"> {{trade.timestamp}} </td>
     </ng-container>
 
+    <!-- Price Column -->
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Price </th>
+      <td mat-cell *matCellDef="let trade"> {{trade.price}} USD </td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>

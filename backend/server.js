@@ -39,7 +39,7 @@ function configureResponse(res, fileName) {
   var json = JSON.parse(data);
 
   var now = new Date().getTime();
-  while(new Date().getTime() < now + 500){
+  while(new Date().getTime() < now + 100){
     /* wait for 0,5 seconds to simulate a small calculation */
   }
 

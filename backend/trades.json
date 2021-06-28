@@ -5,37 +5,43 @@
       "id": 1,
       "currency": "BTC",
       "amount": "0.000011",
-      "timestamp": "TIMESTAMP"
+      "timestamp": "TIMESTAMP",
+      "price": 12
     },
     {
       "id": 2,
       "currency": "BTC",
       "amount": "0.000256",
-      "timestamp": "TIMESTAMP"
+      "timestamp": "TIMESTAMP",
+      "price": 123
     },
     {
       "id": 3,
       "currency": "ETH",
       "amount": "0.185612",
-      "timestamp": "TIMESTAMP"
+      "timestamp": "TIMESTAMP",
+      "price": 1
     },
     {
       "id": 4,
       "currency": "ETH",
       "amount": "0.1356",
-      "timestamp": "TIMESTAMP"
+      "timestamp": "TIMESTAMP",
+      "price": 142
     },
     {
       "id": 5,
       "currency": "ETC",
       "amount": "0.1216",
-      "timestamp": "TIMESTAMP"
+      "timestamp": "TIMESTAMP",
+      "price": 212
     },
     {
       "id": 6,
       "currency": "BTC",
       "amount": "0.00056",
-      "timestamp": "TIMESTAMP"
+      "timestamp": "TIMESTAMP",
+      "price": 99
     }
   ]
 }
