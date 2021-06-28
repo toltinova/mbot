@@ -9,23 +9,18 @@
     h3,
     h4,
     h5,
-    h6 {
+    h6, p {
       padding: 4px 4px;
-      margin: 18px;
+      margin: 8px;
       color: #101A35;
 
-    }
-
-    p {
-    color: #101A35;
-    margin: 18px;
-    padding: 32px 8px;
     }
 
     h1,
     h2 {
       color: #FF6635;
     }
+
 
  svg#coin {
     position: fixed;
