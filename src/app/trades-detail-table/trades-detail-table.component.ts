@@ -15,6 +15,8 @@ export class TradesDetailTableComponent implements AfterViewInit, OnDestroy {
 
   @Input()
   paginatorVisible : boolean = true;
+  @Input()
+  intervalPeriod : number = 1000;
 
   interval : any;
   length: number = 0;
@@ -27,7 +29,7 @@ export class TradesDetailTableComponent implements AfterViewInit, OnDestroy {
   constructor(private apiService: ApiService) { }
 
   ngAfterViewInit() {
-    this.interval = setInterval(() => { this.loadTrades(); }, 2500);
+    this.interval = setInterval(() => { this.loadTrades(); }, this.intervalPeriod);
     this.loadTrades();
     if (this.paginatorVisible) {
       this.paginator.page

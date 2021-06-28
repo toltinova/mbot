@@ -8,7 +8,9 @@
     </mat-card-header>
     <mat-divider></mat-divider>
     <mat-card-content>
-      <app-trades-detail-table [paginatorVisible]="false"></app-trades-detail-table>
+      <app-trades-detail-table
+        [paginatorVisible]="false"
+        [intervalPeriod]="2500"></app-trades-detail-table>
 
     <mat-card-actions style="text-align: center;">
       <a mat-raised-button color="accent" routerLink="/trades">Show all</a>
