@@ -12,7 +12,12 @@
     h6 {
       padding: 4px 4px;
       margin: 8px;
+      color: #101A35;
 
+    }
+    p {
+    margin: 8px;
+    color: #101A35;
     }
     h1,
     h2 {
@@ -80,11 +85,13 @@
   display: table;
   clear: both;
 }
+
 .mat-icon {
   font-size: 50px;
   color: #CED2D2;
 
 }
+
 mat-icon.mat-card-avatar {
   padding: 10px;
   width: 60px;
@@ -92,32 +99,34 @@ mat-icon.mat-card-avatar {
   font-size: 60px;
 }
 
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
+}
+
+.card {
+  border-radius: 20px;
+  border: 1px solid #eee;
+  background-color: white;
+  height: auto;
+  width: 350px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
   }
 
-  .card {
-      border-radius: 20px;
-      border: 1px solid #eee;
-      background-color: white;
-      height: auto;
-      width: 350px;
-      margin: 0 8px 16px;
-      padding: 16px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-    }
+.mat-card-title {
+  margin-top: 20px;
+  color: #101A35;
+}
 
-  .mat-card-title {
-    margin-top: 20px;
-  }
-    .mat-card-header {
-      padding: 20px;
-    }
+.mat-card-header {
+  padding: 20px;
+}
