@@ -11,21 +11,20 @@
     h5,
     h6 {
       padding: 4px 4px;
-      margin: 8px;
+      margin: 18px;
       color: #101A35;
 
     }
+
     p {
-    margin: 8px;
     color: #101A35;
+    margin: 18px;
+    padding: 32px 8px;
     }
+
     h1,
     h2 {
       color: #FF6635;
-    }
-
-    p {
-      padding: 8px 8px;
     }
 
  svg#coin {
@@ -78,6 +77,10 @@
 .column-text {
   float: left;
   width: 33.33%;
+}
+.column-two {
+  float: left;
+  width: 50%;
 }
 
 .row:after {
