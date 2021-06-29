@@ -61,7 +61,7 @@ import { AdjustStrategyComponent } from './adjust-strategy/adjust-strategy.compo
     NgxChartsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
