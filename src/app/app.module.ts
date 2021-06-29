@@ -13,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutDetailComponent } from './about-detail/about-detail.component';
 import { DashboardBalanceComponent } from './dashboard-balance/dashboard-balance.component';
 import { DashboardTradesComponent } from './dashboard-trades/dashboard-trades.component';
-import { DashboardGenericComponent } from './dashboard-generic/dashboard-generic.component';
 import { DashboardPerformanceComponent } from './dashboard-performance/dashboard-performance.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from "@angular/material/icon";
@@ -45,7 +44,6 @@ import { AdjustStrategyComponent } from './adjust-strategy/adjust-strategy.compo
     AboutDetailComponent,
     DashboardBalanceComponent,
     DashboardTradesComponent,
-    DashboardGenericComponent,
     DashboardPerformanceComponent,
     TradesDetailTableComponent,
     AdjustStrategyComponent
