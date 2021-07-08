@@ -10,7 +10,9 @@ This should be done before running the frontend, otherwise there is no test data
 
 ## Frontend Development Server
 
-Run `ng serve` for a frontend development server on `http://localhost:4200/`.
+1. Run `npm install -g @angular/cli` to install the Angular command line interface.
+2. Run `npm install` to install required project dependencies.
+3. Run `ng serve` for a frontend development server on `http://localhost:4200/`.
 
 The app will automatically reload if you change any of the source files.
 
@@ -20,8 +22,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Frontend Docker Image Build
 
-Run `./build.sh` to build a frontend Docker image.
-Run `docker run -itp 80:80 otoltinova/mbot-frontend` to start the newly built image on `http://localhost:80/`.
+1. Run `chmod +x build.sh` to make the build script executable.
+2. Run `./build.sh` to build a frontend Docker image.
+3. Run `docker run -itp 80:80 otoltinova/mbot-frontend` to start the newly built image on `http://localhost:80/`.
 
 ## Docker Compose Stack
 
