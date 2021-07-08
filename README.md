@@ -1,27 +1,29 @@
-# Mbot
+# MBot
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+TODO: Add short description
 
-## Development server
+## Mock Backend Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `docker run -itp 3000:8080 aboger/mbot-backend` to start a mock backend on `http://localhost:3000/`.
 
-## Code scaffolding
+This should be done before running the frontend, otherwise there is no test data available.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Frontend Development Server
 
-## Build
+Run `ng serve` for a frontend development server on `http://localhost:4200/`.
+
+The app will automatically reload if you change any of the source files.
+
+## Frontend Angular Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Frontend Docker Image Build
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `./build.sh` to build a frontend Docker image.
+Run `docker run -itp 80:80 otoltinova/mbot-frontend` to start the newly built image on `http://localhost:80/`.
 
-## Running end-to-end tests
+## Docker Compose Stack
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `docker compose up` to start the frontend on `http://localhost:80/` and the backend on `http://localhost:3000/`.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

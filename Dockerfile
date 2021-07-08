@@ -3,7 +3,7 @@ FROM node:14.16.1-alpine AS builder
 WORKDIR /usr/local/app
 COPY ./ /usr/local/app/
 RUN npm install
-RUN npm run build --prod
+RUN npm run build --prod --build-optimizer
 
 # Stage 2: Serve app with nginx server
 FROM nginx:alpine
