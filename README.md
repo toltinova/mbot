@@ -1,6 +1,10 @@
 # MBot
 
-TODO: Add short description
+This project aims to create a UI for MBot, a cryptocurrency bot, capable of trading many cryptocurrencies at runtime.
+
+MBot depends on the GitHub open source project Zenbot, mainly maintained by the developer DeviaVir, which makes automated cryptocurrency trading possible. 
+
+Where the Zenbot is only capable of trading one cryptocurrency trading pair, the MBot, which consists of many Zenbots, renders multiple trading pairs possible. 	
 
 ## Mock Backend Setup
 
